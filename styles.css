@@ -2,13 +2,13 @@
 /* VARIABLES */
 :root {
     /* principales */
-    --primario: rgb(0, 157, 113);
+    --primario: rgb(0, 170, 122);
     --secundario: rgb(0, 216, 151);
     
     /* géneros */
-    --terror: rgb(157, 0, 0);
-    --shooters: rgb(0, 84, 168);
-    --aventura: rgb(99, 165, 0);
+    --terror: rgb(182, 0, 0);
+    --shooters: rgb(0, 93, 185);
+    --aventura: rgb(112, 187, 0);
     --estrategia: rgb(119, 0, 204);
 }
 
@@ -166,7 +166,7 @@ body {
     background-color: rgb(0, 0, 0);
 
     border: solid var(--secundario) 3px;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 /* cuando se xoloca el mose sobre él, realiza una acción */
@@ -340,13 +340,12 @@ body {
     text-align: left;
     color: white;
     background-color: rgba(128, 128, 128, 0.37);
+    
+    border-radius: 4px;
+    width: fit-content;
+    padding: 5px;
 
-    border-top-left-radius: 10px 70px;
-    border-top-right-radius: 30px 70px;    
-    border-bottom-right-radius: 180px 10px;
-    border-bottom-left-radius: 10px 40px;
-
-    box-shadow: 0px 0px 50px 10px white;
+    box-shadow: 0px 0px 100px 2px white;
 }
 
 /* modifica h1 que está dentro de .contenedorIndex */
@@ -470,17 +469,17 @@ body {
 	color: var(--primario);
     background-color: #fff;
     width: fit-content;
+    border: solid var(--secundario) 3px;
 
     margin: 10px auto;
     padding: 5px 5px;
     border-radius: 4px;
-	font-size: 32px;
+	font-size: 30px;
     text-align: center;
 }
 
 /* cuando se coloca el mouse sobre él, realiza una acción */
 .contenedorMenus .section h2:hover {
-    zoom: 105%;
     color: red;
 }
 
@@ -543,9 +542,11 @@ body {
 .contenedorJuego .main h2{
     color: black;
     background-color: white;
+    border: solid var(--secundario) 3px;
+
     width: fit-content;
     padding: 5px;
-    font-size: 150%;
+    font-size: 30px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
