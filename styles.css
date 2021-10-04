@@ -1,4 +1,17 @@
 
+/* VARIABLES */
+:root {
+    /* principales */
+    --primario: rgb(0, 157, 113);
+    --secundario: rgb(0, 216, 151);
+    
+    /* géneros */
+    --terror: rgb(157, 0, 0);
+    --shooters: rgb(0, 84, 168);
+    --aventura: rgb(99, 165, 0);
+    --estrategia: rgb(119, 0, 204);
+}
+
 /* LINKS */
 a:link{
     color: inherit;
@@ -11,30 +24,30 @@ a{
     color: white;
 }
 a:hover{
-    color: rgb(0, 157, 113);
+    color: var(--primario);
 }
 
 
 /* SCROLLBAR */
 /* ancho del scrollbar */
 body::-webkit-scrollbar{
-    width: 5px;
+    width: 7px;
 }
 
 /* color base del scrollbar */
 body::-webkit-scrollbar-thumb{
-    background-color:rgb(0, 157, 113);
+    background-color:var(--primario);
     border-radius: 4px;
 }
 
 /* color cuando se coloca el mouse sobre él */
 body::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 216, 155);
+    background: var(--secundario);
 }
 
 /* color del track */
 body::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: rgb(24, 41, 41);
 }
 
 /* hace que todo tenga margen y padding 0 */
@@ -142,7 +155,7 @@ body {
     grid-area: aside;
 
     position: sticky;
-    top: 1px;
+    top: 0px;
 
     margin: 20px 0px;
     padding: 5px;
@@ -152,7 +165,7 @@ body {
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
 
-    border: solid rgb(0, 218, 156) 3px;
+    border: solid var(--secundario) 3px;
     border-radius: 4px;
 }
 
@@ -173,19 +186,19 @@ body {
 
 /* cuando a la clase se le coloca el mouse sobre él, cambia de color */
 .inicioTerror:hover {
-    color: rgb(157, 0, 0);
+    color: var(--terror);
 }
 
 .inicioShooters:hover {
-    color: rgb(0, 84, 168);
+    color: var(--shooters);
 }
 
 .inicioAventura:hover {
-    color: rgb(99, 165, 0);
+    color: var(--aventura);
 }
 
 .inicioEstrategia:hover {
-    color: rgb(119, 0, 204);
+    color: var(--estrategia);
 }
 
 
@@ -267,8 +280,8 @@ body {
 /* contenedorGeneros */
 /* modifica section que está dentro de .contenedorGeneros */
 .contenedorGeneros section {
-    border-left: rgb(0, 157, 113) solid 3px;
-    border-right: rgb(0, 157, 113) solid 3px;
+    border-left: var(--primario) solid 3px;
+    border-right: var(--primario) solid 3px;
     margin-bottom: 50px;
 }
 
@@ -426,7 +439,7 @@ body {
 /* modifica .section que está dentro de .contenedorMenus */
 .contenedorMenus .section {
     padding: 10px;
-	box-shadow: 0 4px 20px rgb(0, 157, 113);
+	box-shadow: 0 4px 20px var(--primario);
 	border-radius: 5px;
 
 	display: grid;
@@ -454,7 +467,7 @@ body {
 
 /* modifica h2 que está dentro de .section que a su vez está dentro de .contenedorMenus */
 .contenedorMenus .section h2 {
-	color: rgb(0, 157, 113);
+	color: var(--primario);
     background-color: #fff;
     width: fit-content;
 
@@ -506,8 +519,8 @@ body {
 }
 
 .contenedorJuego .main {
-    border-left: 1px solid rgb(0, 157, 113);
-    border-right: 1px solid rgb(0, 157, 113);
+    border-left: 1px solid var(--primario);
+    border-right: 1px solid var(--primario);
 }
 
 .contenedorJuego .main h1{
@@ -540,7 +553,7 @@ body {
 }
 
 .contenedorJuego .main a h2:hover {
-    zoom: 105%;
+    zoom: 101%;
     color: red;
 }
 
@@ -550,7 +563,7 @@ body {
 }
 
 .contenedorJuego .main p a {
-    color: rgb(0, 157, 113);
+    color: var(--primario);
     margin: 10px 10px;
 }
 
@@ -575,9 +588,9 @@ body {
 
 .contenedorJuego form {
     width: fit-content;
-    box-shadow: 3px 1px 10px rgb(0, 157, 113);
+    box-shadow: 3px 1px 10px var(--primario);
     padding: 10px;
-    border: 1px solid rgb(0, 157, 113);
+    border: 1px solid var(--primario);
 }
 
 .contenedorJuego form label {
@@ -596,33 +609,29 @@ body {
 
 /* INICIO */
 .inicio{
-    background-color: rgb(0, 157, 113);
+    background-color: var(--primario);
 }
 
 /* TERROR */
 .terror{
-    background-color: rgb(157, 0, 0);
+    background-color: var(--terror);
 }
 
 /* SHOOTERS */
 .shooters{
-    background-color: rgb(0, 84, 168);
+    background-color: var(--shooters);
 }
 
 /* AVENTURA */
 .aventura{
-    background-color: rgb(99, 165, 0);
+    background-color: var(--aventura);
 }
 
 /* ESTRATEGIA */
 .estrategia{
-    background-color: rgb(119, 0, 204);
+    background-color: var(--estrategia);
 }
 
-/* LUCHA */
-.lucha {
-    background-color: yellow;
-}
 
 
 
