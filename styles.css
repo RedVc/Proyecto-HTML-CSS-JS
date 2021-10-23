@@ -61,7 +61,7 @@ body::-webkit-scrollbar-track {
 
 /* coloca el color del cuerpo en negro */
 body {
-    background-color: black;
+    background-color: rgb(15, 15, 15);
     /* color: white; */
 }
 
@@ -153,7 +153,6 @@ body {
 */
 .aside {
     grid-area: aside;
-
     position: sticky;
     top: 0px;
 
@@ -162,12 +161,13 @@ body {
 
     text-align: center;
     font-size: 100%;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    color: white;
+    background-color: black;
 
     border: solid var(--secundario) 3px;
     border-radius: 8px;
 }
+
 
 /* cuando se xoloca el mose sobre él, realiza una acción */
 .aside a:hover {
@@ -253,16 +253,21 @@ body {
 /* NOMBRE DE GÉNERO */
 /* modifica la clase */
 .frase {
-    width: fit-content;
+    width: 250px;
+    /* width: -moz-min-content; */
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     color: black;
     font-size: 105%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+}
+
+.frase2 {
+    width: 190px;
 }
 
 
@@ -437,8 +442,10 @@ body {
 
 /* modifica .section que está dentro de .contenedorMenus */
 .contenedorMenus .section {
+    width: 1fr;
+    height: auto;
     padding: 10px;
-	box-shadow: 0 4px 20px var(--primario);
+	box-shadow: 0 4px 10px var(--primario);
 	border-radius: 5px;
 
 	display: grid;
@@ -446,14 +453,11 @@ body {
 
 	/* para navegadores que no soportan subgrid */
 	grid-template-rows: auto 1fr auto;
-	grid-template-rows: subgrid;
 
-	/* en publicaciones se definieron 6 columnas */
-	/* cada columna se divide en 3 */
 	grid-column: span 3;
 
-	grid-template-columns: repeat(auto, 1fr);
-	grid-template-columns: subgrid;
+	grid-template-columns: repeat(3, auto);
+	/* grid-template-columns: subgrid; */
 }
 
 /* modifica h1 que está dentro de .section que a su vez está dentro de .contenedorMenus */
@@ -468,19 +472,20 @@ body {
 .contenedorMenus .section h2 {
 	color: var(--primario);
     background-color: #fff;
-    width: fit-content;
-    border: solid var(--secundario) 3px;
+    width: 200px;
+    border: solid var(--secundario) 1px;
 
     margin: 10px auto;
     padding: 5px 5px;
     border-radius: 4px;
-	font-size: 30px;
+	font-size: 25px;
     text-align: center;
 }
 
 /* cuando se coloca el mouse sobre él, realiza una acción */
 .contenedorMenus .section h2:hover {
     color: red;
+    background-color: lightgrey;
 }
 
 /* modifica p que está dentro de .section que a su vez está dentro de .contenedorMenus */
@@ -491,8 +496,6 @@ body {
     margin-right: auto;
     padding-left: 10px;
     border-radius: 4px;
-    background-color: rgb(19, 19, 19);
-	grid-column: span 3;
 }
 
 
@@ -539,25 +542,6 @@ body {
     height: auto;
 }
 
-.contenedorJuego .main h2{
-    color: black;
-    background-color: white;
-    border: solid var(--secundario) 3px;
-
-    width: fit-content;
-    padding: 5px;
-    font-size: 30px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-}
-
-.contenedorJuego .main a h2:hover {
-    zoom: 101%;
-    color: red;
-}
-
 .contenedorJuego .main p {
     color: white;
     margin: 10px 10px;
@@ -588,7 +572,7 @@ body {
 }
 
 .contenedorJuego form {
-    width: fit-content;
+    width: 500px;
     box-shadow: 3px 1px 10px var(--primario);
     padding: 10px;
     border: 1px solid var(--primario);
@@ -663,10 +647,17 @@ body {
 		margin: 20px 0;
 	}
 
+
     iframe {
         margin-left: 0px;
 
         max-width: 100%;
         height: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contenedorJuego form {
+        width: 250px;
     }
 }
