@@ -9,6 +9,10 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/CSS/comentarios.css">
+
+    <!-- JS -->
+    <script src="/JS/formularioCorreo.js" defer></script>
     
     <!-- ICONO -->
     <link rel="shortcut icon" href="/assets/images/gamecontroller_23721.ico" type="image/x-icon">
@@ -112,31 +116,40 @@
         <!-- MAIN -->
         <main class="main">
 
-            <form action="/enviado.html" method="GET" class="txtCont">
+            <!-- comentarios -->
+            <form  target="_blank" action="https://formsubmit.co/redvc13.03@gmail.com" method="POST" class="txtCont" id="txtCont">
 
-                <label for="email">
-                    Correo electrónico:
-                </label>
-                <input type="email" id="email" minlength="0" maxlength="80" placeholder="xxxxx@xxxx.xxxx" autofocus required>
+                <h3>
+                    Opinion:
+                </h3>
 
-                <br><br>
+                <!-- Usuario -->
+                <label for="usuario" class="formularioUsuarioLabel" id="formularioUsuarioLabel">Usuario: </label>
+                <input type="text" class="formularioUsuarioInput" id="usuario" name="usuario" minlength="4" maxlength="16" placeholder="..." required>
+                <br>
+                <p class="error_usuario" id="error_usuario">
+                    El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.
+                </p>
 
-                <label for="password">
-                Contraseña:
-                </label>
-                <input type="password" id="password" minlength="0" maxlength="8" placeholder="xxxxxxxx" required>
+                <!-- Comentario -->
+                <label for="comentario" class="formularioComentarioLabel">Comentario:</label>
+                <input type="text" name="comentario" class="formularioComentarioTextarea" id="comentario" minlength="4" maxlength="150" placeholder="..." required></input>
+                <br>
+                <p class="error_comentario" id="error_comentario">
+                    El comentario debe contener de 4 a 150 caracteres.
+                </p>
 
-                <br><br>
+                <br>
 
-                <label for="comentario">
-                    Opinión:
-                </label>
-                <textarea name="comentario" id="comentario" maxlength="150" required></textarea>
+                <button type="submit" class="formularioBoton">Enviar</button>
 
-                <br><br>
-
-                <input type="submit">
-
+                <p class="enviado" id="enviado">
+                    Comentario enviado correctamente!
+                </p>
+                
+                <p class="error_enviar" id="error_enviar">
+                    Error al enviar el comentario, completa los campos.
+                </p>
             </form>
 
         </main>

@@ -73,7 +73,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     
-    max-width: 1500px;
+    /* max-width: 1800px; */
     margin: 0px auto;
     
     display: grid;
@@ -123,7 +123,7 @@ body {
 /* modifica .nav que está dentro de .footer */
 .footer .nav {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 30px auto;
 }
 
 /* modifica .nav */
@@ -153,7 +153,7 @@ body {
 */
 .aside {
     grid-area: aside;
-    position: sticky !important;
+    position: sticky;
     top: 0px;
 
     margin: 20px 0px;
@@ -214,6 +214,8 @@ body {
 /* determina su grid-area como main */
 .main {
     grid-area: main;
+    max-width: 1300px;
+    margin: auto;
 }
 
 /* modifica la clase */
@@ -238,8 +240,13 @@ body {
 /* define su grid-area como footer */
 .footer {
     grid-area: footer;
-    /* background-color: yellow; */
+    background-color: var(--primario);
     color: black;
+}
+
+.footer p {
+    background-color: black;
+    padding: 20px;
 }
 
 /* modifica la clase */
@@ -291,10 +298,10 @@ body {
 }
 
 .sectionGeneros {
-    position: sticky;
-    top: 40px;
+    /* position: ; */
 
     background-color: black;
+    padding-bottom: 20px;
 }
 
 /* modifica h1 que está dentro de .sectionGeneros que a su vez está dentro de .contenedorGeneros */
@@ -332,7 +339,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     
-    max-width: 1500px;
+    /* max-width: 1500px; */
     margin: 0px auto;
     
     display: grid;
@@ -392,8 +399,8 @@ body {
 }
 
 .contacto {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-width: 1300px;
     color: white;
     font-size: 35px;
 }
@@ -409,12 +416,12 @@ body {
 }
 
 .insta:hover {
-    color: rgb(211, 0, 0);
+    color: rgb(211, 0, 200);
     
 }
 
 .whats:hover {
-    color: rgb(13, 172, 8);
+    color: rgb(8, 192, 2);
 }
 
 
@@ -424,8 +431,12 @@ body {
 	padding-top: 10px;
     padding-bottom: 10px;
     
-    max-width: 1500px;
+    /* max-width: 1500px; */
     margin: 0px auto;
+}
+
+.contenedorMenus .section {
+    margin-bottom: 20px;
 }
 
 /* modifica img que está dentro de .section que a su vez está dentro de .contenedorMenus */
@@ -445,6 +456,7 @@ body {
 	grid-template-rows: repeat(1, auto 1fr auto);
 	gap: 20px;
 
+    margin-bottom: 40px;
 }
 
 /* modifica .section que está dentro de .contenedorMenus */
@@ -514,7 +526,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     
-    max-width: 1500px;
+    /* max-width: 1500px; */
     margin: 0px auto;
     
     display: grid;
