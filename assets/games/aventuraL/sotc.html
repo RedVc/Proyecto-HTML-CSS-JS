@@ -9,19 +9,25 @@
         content="En este sitio encontrarás las mejores ventas y reseñas del mundo de los videojuegos!!">
     <meta name="author" content="Redwin Valverde Castro INA 2021">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
+    <!-- CSS -->
     <link rel="stylesheet" href="/styles.css">
+    <!-- CSS comentarios -->
+    <link rel="stylesheet" href="/CSS/comentarios.css">
+
+    <!-- JS -->
+    <script src="/JS/functions.js" defer></script>
+    
+    <!-- ICONO -->
     <link rel="shortcut icon" href="/assets/images/gamecontroller_23721.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/8f45153608.js" crossorigin="anonymous"></script>
+    
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/8f45153608.js" crossorigin="anonymous" defer></script>
 
     <title>TERROR | HUNGER GAMES</title>
 
@@ -205,35 +211,57 @@
             </div>
 
 
-            <!-- comentarios -->
-            <form action="/enviado.html" method="GET" class="txtCont">
+            <!-- Zona de comentarios -->
+            <div class="zonaComentarios" id="zonaComentarios">
 
-                <h3>
+                <h3 class="tituloComentarios" id="tituloComentarios">
+
                     Comentarios:
                 </h3>
-                <label for="email">
-                    Correo electrónico:
-                </label>
-                <input type="email" id="email" minlength="0" maxlength="80" placeholder="xxxxx@xxxx.xxxx" required>
+
+                <div class="todosComentarios" id="todosComentarios">
+
+                    <!-- aquí irán todos los comentarios -->
+                </div>
+            </div>
+
+
+
+
+            <!-- comentarios -->
+            <form action="" class="txtCont" id="txtCont">
+
+                <h3>
+                    Nuevo comentario:
+                </h3>
+
+                <!-- Usuario -->
+                <label for="usuario" class="formularioUsuarioLabel" id="formularioUsuarioLabel">Usuario: </label>
+                <input type="text" class="formularioUsuarioInput" id="usuario" name="usuario" minlength="4" maxlength="16" placeholder="..." required>
+                <br>
+                <p class="error_usuario" id="error_usuario">
+                    El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.
+                </p>
+
+                <!-- Comentario -->
+                <label for="comentario" class="formularioComentarioLabel">Comentario:</label>
+                <input type="text" name="comentario" class="formularioComentarioTextarea" id="comentario" minlength="4" maxlength="150" placeholder="..." required></input>
+                <br>
+                <p class="error_comentario" id="error_comentario">
+                    El comentario debe contener de 4 a 150 caracteres.
+                </p>
 
                 <br>
 
-                <label for="pasword">
-                    Contraseña:
-                </label>
-                <input type="password" id="password" minlength="0" maxlength="8" placeholder="xxxxxxxx" required>
+                <button type="submit" class="formularioBoton">Enviar</button>
 
-                <br>
-
-                <label for="comentario">
-                    Comentario:
-                </label>
-                <textarea name="comentario" id="comentario" maxlength="150" required></textarea>
-
-                <br>
-
-                <input type="submit">
-
+                <p class="enviado" id="enviado">
+                    Comentario enviado correctamente!
+                </p>
+                
+                <p class="error_enviar" id="error_enviar">
+                    Error al enviar el comentario, completa los campos.
+                </p>
             </form>
 
         </main>

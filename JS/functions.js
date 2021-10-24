@@ -57,10 +57,7 @@ txtCont.addEventListener('submit', (e) => {
         let coment = "";
         coment = document.getElementById('comentario').value;
 
-        let comentarioCompleto = "";
-        comentarioCompleto = "<h3>" + user + "</h3> <p>" + coment + "</p><br><br>";
-
-        document.getElementById('todosComentarios').innerHTML = comentarioCompleto;
+        document.getElementById('todosComentarios').innerHTML += "<div> <h4>"+ user +"</h4> <p>"+ coment +"</p> </div> <br>";
         
 		txtCont.reset();
         
