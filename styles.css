@@ -153,7 +153,7 @@ body {
 */
 .aside {
     grid-area: aside;
-    position: sticky;
+    position: sticky !important;
     top: 0px;
 
     margin: 20px 0px;
@@ -288,6 +288,13 @@ body {
     border-left: var(--primario) solid 3px;
     border-right: var(--primario) solid 3px;
     margin-bottom: 50px;
+}
+
+.sectionGeneros {
+    position: sticky;
+    top: 40px;
+
+    background-color: black;
 }
 
 /* modifica h1 que está dentro de .sectionGeneros que a su vez está dentro de .contenedorGeneros */
