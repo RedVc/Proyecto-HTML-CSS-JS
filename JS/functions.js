@@ -45,6 +45,11 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 });
 
+function crearBloque(u, c) {
+	
+	return "<div> <h4>"+ u +"</h4> <p>"+ c +"</p> </div> <br>";
+}
+
 
 txtCont.addEventListener('submit', (e) => {
 	e.preventDefault();
@@ -57,7 +62,9 @@ txtCont.addEventListener('submit', (e) => {
         let coment = "";
         coment = document.getElementById('comentario').value;
 
-        document.getElementById('todosComentarios').innerHTML += "<div> <h4>"+ user +"</h4> <p>"+ coment +"</p> </div> <br>";
+		bloque = crearBloque(user, coment);
+
+        document.getElementById('todosComentarios').innerHTML += bloque;
         
 		txtCont.reset();
         
