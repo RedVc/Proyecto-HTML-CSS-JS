@@ -51,21 +51,14 @@ txtCont.addEventListener('submit', (e) => {
 
 	if(campos.usuario == true && campos.comentario == true && usuario.value != "" && comentario.value != ""){
         
-        let user = "";
-        user = document.getElementById('usuario').value;
-
-        let coment = "";
-        coment = document.getElementById('comentario').value;
-
-        // document.getElementById('todosComentarios').innerHTML += "<div> <h4>"+ user +"</h4> <p>"+ coment +"</p> </div> <br>";
         
-		txtCont.reset();
-        
+		// txtCont.reset();
+		
 		document.getElementById('enviado').classList.add('enviado-activo');
 		setTimeout(() => {
 			document.getElementById('enviado').classList.remove('enviado-activo');
 		}, 5000);
-
+		
 	} else {
 
 		document.getElementById('error_enviar').classList.add('error-activo');
